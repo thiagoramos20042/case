@@ -42,3 +42,13 @@ dotenv
 │── .env                  # Variáveis de ambiente (chave OpenAI)
 
 │── sales.db              # Banco de dados SQLite
+
+⚡ Como Executar o Projeto
+
+1️⃣ Pré-requisitos
+
+Ter o Python 3.8+ instalado
+
+Criar e ativar um ambiente virtual:
+python -m venv venv
+source venv/bin/activate
