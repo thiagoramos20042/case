@@ -34,6 +34,7 @@ dotenv
 
 📂 Estrutura do Projeto
 📁 sales_insights_api/
+
 │── main.py               # Arquivo principal com a API
 
 │── requirements.txt      # Dependências do projeto
