@@ -52,3 +52,39 @@ Ter o Python 3.8+ instalado
 Criar e ativar um ambiente virtual:
 python -m venv venv
 source venv/bin/activate
+
+Instalar as dependências:
+pip install -r requirements.txt
+
+Criar um arquivo .env e adicionar a chave da OpenAI:
+OPENAI_API_KEY= "sua-chave-aqui"
+
+🌍 Endpoints Disponíveis
+
+🔹 Obter os top 5 produtos mais vendidos
+GET /top-products
+
+🔹 Obter insights sobre vendas
+GET /sales-insights?question=Sua Pergunta Aqui
+
+🔹 Listar endpoints disponíveis
+GET /api-endpoints
+
+🔹 Para testar as APi´s (só acesse depois de rodar o código) 
+http://127.0.0.1:8000/docs#/
+
+🛠 Contribuição
+
+Faça um fork do repositório
+
+Crie uma branch (git checkout -b feature-nova)
+
+Commit suas alterações (git commit -m 'Adiciona nova feature')
+
+Envie suas alterações (git push origin feature-nova)
+
+Abra um Pull Request
+
+
+
+
