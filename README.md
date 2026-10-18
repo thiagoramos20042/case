@@ -1,90 +1,47 @@
-Sales Insights API
+# Sales Insights | API de vendas com IA
 
-📌 Visão Geral
+API que consulta vendas em SQLite e reúne endpoints analíticos e perguntas em linguagem natural.
 
-A Sales Insights API é uma API desenvolvida com FastAPI e SQLAlchemy para fornecer insights sobre vendas a partir de um banco de dados SQLite. Além disso, a API integra o LangChain para responder perguntas sobre vendas de maneira inteligente e baseada em dados.
+**Aplicações Python** · API FastAPI
 
-🚀 Funcionalidades
+[← Portfólio de Thiago Oliveira](https://github.com/thiagoramos20042/thiagoramos20042) · [Catálogo de projetos](https://github.com/thiagoramos20042/thiagoramos20042/blob/main/PROJETOS.md)
 
-📊 Obter os 5 produtos mais vendidos no mês anterior
+## Objetivo
 
-🔍 Analisar vendas com processamento via LangChain
+Disponibilizar consultas de vendas por HTTP e explorar respostas geradas a partir dos registros comerciais.
 
-🔗 Listar os endpoints disponíveis
+## O que você encontra
 
-🛠 Tecnologias Utilizadas
+- GET /top-products para consultar os cinco produtos mais vendidos no mês anterior.
+- GET /sales-insights para perguntas sobre os dados de vendas.
+- GET /api-endpoints e documentação interativa da API.
 
-Python
+## Tecnologias
 
-FastAPI
+Python · FastAPI · SQLAlchemy · SQLite · LangChain · FAISS · OpenAI
 
-SQLAlchemy
+## Arquivos principais
 
-SQLite
+| Arquivo | Conteúdo |
+| --- | --- |
+| [main.py](main.py) | Modelos, consultas, endpoints e integração com IA. |
+| [requirements.txt](requirements.txt) | Dependências do serviço. |
 
-LangChain
+## Como explorar
 
-FAISS
+Na raiz do repositório:
 
-OpenAI API
+```bash
+python -m pip install -r requirements.txt
+python -m uvicorn main:app --reload
+```
 
-Uvicorn
+Com o serviço iniciado, abra http://127.0.0.1:8000/docs para consultar os endpoints.
 
-dotenv
+## Contexto do projeto
 
-📂 Estrutura do Projeto
-📁 sales_insights_api/
+A funcionalidade de IA usa a API da OpenAI e requer credencial própria. Em main.py, a leitura dos embeddings ainda usa o nome de variável sua_senha; ajuste essa configuração ao preparar seu ambiente. A base local é criada/populada pelo fluxo da aplicação.
 
-│── main.py               # Arquivo principal com a API
+---
 
-│── requirements.txt      # Dependências do projeto
-
-│── .env                  # Variáveis de ambiente (chave OpenAI)
-
-│── sales.db              # Banco de dados SQLite
-
-⚡ Como Executar o Projeto
-
-1️⃣ Pré-requisitos
-
-Ter o Python 3.8+ instalado
-
-Criar e ativar um ambiente virtual:
-python -m venv venv
-source venv/bin/activate
-
-Instalar as dependências:
-pip install -r requirements.txt
-
-Criar um arquivo .env e adicionar a chave da OpenAI:
-OPENAI_API_KEY= "sua-chave-aqui"
-
-🌍 Endpoints Disponíveis
-
-🔹 Obter os top 5 produtos mais vendidos
-GET /top-products
-
-🔹 Obter insights sobre vendas
-GET /sales-insights?question=Sua Pergunta Aqui
-
-🔹 Listar endpoints disponíveis
-GET /api-endpoints
-
-🔹 Para testar as APi´s (só acesse depois de rodar o código) 
-http://127.0.0.1:8000/docs#/
-
-🛠 Contribuição
-
-Faça um fork do repositório
-
-Crie uma branch (git checkout -b feature-nova)
-
-Commit suas alterações (git commit -m 'Adiciona nova feature')
-
-Envie suas alterações (git push origin feature-nova)
-
-Abra um Pull Request
-
-
-
-
+Integra o [portfólio de Thiago Oliveira](https://github.com/thiagoramos20042).
